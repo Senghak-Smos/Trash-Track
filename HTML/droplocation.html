@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Waste</title>
+    <script src="/JAVA_SCRIPT/Eng_kh_droplocation_.js" defer></script>
+    <script src="/JAVA_SCRIPT/Eng_kh.js" defer></script>
+
+    <link rel="stylesheet" href="/CSS/droplocation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yrsa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <div class="logo"><img src="/Image/garbage-truck.png" alt="" /></div>
+        <div class="logo1">TrashTrack</div>
+        <ul class="nav-link">
+          <li class="men"><a href="#home">Home</a></li>
+          <li class="men"><a href="#home">About</a></li>
+          <li class="men"><a href="#home">Services</a></li>
+          <li class="men"><a href="#home">Contact</a></li>
+          <li class="men"><a href="#home">Team</a></li>
+          <li class="lang-logo">
+            <a href="" style="color: rgb(7, 7, 248)"
+              ><i class="bi bi-globe"></i
+            ></a>
+          </li>
+          <li class="lang-ch">
+            <select class="form-select" id="droplocation">
+              <option value="droplocation.html" selected>English</option>
+              <option value="droplocation_khmer.html">Khmer</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="first-title">
+        <div class="re">
+          <h1 class="port">Report Wast</h1>
+          <p>2. Second step ( Upload location )</p>
+        </div>
+
+        <div
+          class="container-title"
+          style="width: 800px; min-height: 350px; position: relative"
+        >
+          <div id="beforeMap" style="text-align: center">
+            <img
+              id="location"
+              src="/Image/map.png"
+              alt="Map"
+              style="cursor: pointer"
+              onclick="openInteractiveMap()"
+            />
+            <h4>Drop your location here!</h4>
+          </div>
+
+          <div
+            id="pickerMap"
+            style="
+              display: none;
+              width: 800px;
+              height: 400px;
+              margin-top: 15px;
+              border-radius: 8px;
+            "
+          ></div>
+
+          <input type="hidden" id="userLat" />
+          <input type="hidden" id="userLon" />
+          <p
+            id="locationStatus"
+            style="
+              color: #28a745;
+              font-weight: bold;
+              margin-top: 10px;
+              text-align: center;
+            "
+          ></p>
+        </div>
+
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <div class="button-two">
+          <div class="back">
+            <a href="upload_image.html">
+              <button>&larr;</button>
+            </a>
+          </div>
+          <div class="back">
+            <a href="description.html">
+              <button>Next</button>
+            </a>
+          </div>
+        </div>
+        <br /><br />
+
+        <div class="re">
+          <h1>2. Second Step ( Drop location )</h1>
+          <ul>
+            <li>Turn on location.</li>
+            <br />
+            <li>Open app “Google Map”</li>
+            <br />
+            <li>
+              Copy your location place that you stand by that have problem.
+            </li>
+          </ul>
+        </div>
+        <br /><br />
+
+        <div class="footer">
+          <p>@Build for country to help environment clean.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

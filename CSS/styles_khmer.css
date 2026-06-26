@@ -1,0 +1,571 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #31bc79;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(255, 255, 0);
+  border-radius: 50px;
+
+  background: #1fa2ff;
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+
+  width: 95%;
+  padding: 0px 15px;
+  margin: auto;
+  margin: 10px auto;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  padding: 0px 15px;
+}
+.logo1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin-right: 430px;
+}
+
+.nav-link {
+  list-style: none;
+  display: flex;
+  margin-right: 50px;
+  font-family: "ADLaM Display", system-ui;
+  position: relative;
+}
+
+.nav-link a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: yellow;
+}
+
+.nav-link li {
+  margin-left: 40px;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+}
+
+.nav-link a {
+  position: relative;
+  text-decoration: none;
+  font-size: 22px;
+  color: rgb(10, 10, 10);
+  transition: 0.5s;
+}
+
+.nav-link .lang-ch {
+  margin-left: 5px;
+}
+
+.lang-ch select {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+}
+
+.form-select {
+  margin-top: 0px;
+  width: 85px;
+  height: 30px;
+  border: 2px solid rgb(44, 1, 232);
+  background: rgba(0, 0, 0, 0.044);
+  border-radius: 10px;
+  font-family: "ADLaM Display", system-ui;
+  font-size: 18px;
+}
+
+.nav-bar li.men:hover a {
+  color: rgb(255, 15, 227);
+  transform: scale(1.1);
+  display: inline-block;
+}
+
+.hom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  height: 90vh;
+}
+
+.ph img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+
+.badge {
+  font-size: 50px;
+  font-family: "Noto Sans Khmer", sans-serif;
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.report {
+  font-size: 24px;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  color: white;
+  line-height: 1.2;
+  padding: 0px 20px;
+}
+
+.tra {
+  margin-left: -30px;
+}
+
+.p p {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  font-size: 20px;
+  max-width: 800px;
+  line-height: 1.4;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.hel {
+  margin-left: 0;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons .btn-getstart {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+}
+.btn-getstart {
+  background-color: rgb(6, 167, 247);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-getstart:hover {
+  color: white;
+  background: #b3ffab;
+  background: linear-gradient(to right, #b3ffab, #12fff7);
+  transform: translateY(-10px);
+}
+
+.btn-sigin:hover {
+  transform: translateY(-10px);
+}
+
+.how-it-work {
+  background-color: rgb(255, 255, 255);
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.how-it-work h1 {
+  font-family: "Noto Sans Khmer", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.sub-title {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.work img {
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  padding: 40px 30px;
+  width: 320px;
+  background: #a1c4fd;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  color: black;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  animation: showUp 3s infinite ease-in-out;
+}
+
+@keyframes showUp {
+  0%,
+  100% {
+    transform: translateY(10px);
+    opacity: 30%;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+}
+
+.card p {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Hidden State */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+
+  transition: all 1s ease;
+}
+
+/* Show Animation */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catagories {
+  color: black;
+  background-color: white;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.catagories h2 {
+  padding: 10px 10px;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 55px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.catagories p {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  font-size: 22px;
+  color: #6b7280;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.slide {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-track p {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+.slide-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  background-color: #31bc79;
+  padding: 20px 20px;
+  animation: scroll 20s linear infinite;
+}
+
+.categories-types {
+  flex-shrink: 0;
+
+  padding: 15px 30px;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 20px));
+  }
+}
+
+.everything-u-need {
+  background-color: white;
+  padding: 5px 10px;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.everything-u-need h2 {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  margin-bottom: 20px;
+  font-size: 55px;
+}
+
+.everything-u-need-container {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+
+.everything-u-need-container .everything-u-need-card h3 {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+}
+
+.everything-u-need-card {
+  width: 33.3%;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: left;
+  background: white;
+  padding: 30px 40px;
+  animation: showUpnIn 2.5s ease-in-out;
+}
+
+.everything-u-need-card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  color: black;
+  text-align: left;
+  background: white;
+  padding: 30px 40px;
+  margin-top: 20px;
+  animation: showUpnIn 2.5s ease-in-out;
+}
+
+@keyframes showUpnIn {
+  from {
+    transform: translateY(20px);
+    opacity: 50%;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+.everything-u-need h3 {
+  font-family: monospace;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.btn-btn-startnow {
+  background-color: white;
+  color: green;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.buttons button {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.footer {
+  width: 100%;
+
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer h2 {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  margin-bottom: 20px;
+  font-size: 55px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer p {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.footer .buttons {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 70px;
+  background-color: #3b3b3b;
+}
+
+footer .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+}
+
+footer .container .about h2 {
+  color: white;
+  position: relative;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+}
+
+footer .container .about h2::before {
+  content: "";
+  bottom: 0px;
+  left: 0;
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: yellow;
+}
+
+footer p {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  color: white;
+}
+
+.icon {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 10px;
+}
+
+.icon li {
+  list-style: none;
+}
+
+.icon li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d4d4ec6;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.icon li a:hover {
+  background-color: #12d8fa;
+}
+
+.quick li {
+  list-style: none;
+}
+
+.quick li a {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quick li a:hover {
+  color: rgb(208, 255, 0);
+}
+
+.info {
+  position: relative;
+}
+
+.info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 20px;
+}
+
+.info li span:nth-child(1) {
+  color: white;
+  font-size: 20px;
+}
+
+.info li span {
+  color: white;
+}
+
+.info a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 640) {
+  footer {
+    padding: 40px;
+  }
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.phon {
+  margin-top: 0px;
+}
+
+.copyright {
+  background-color: white;
+  width: 100%;
+  color: #777676;
+  padding: 1px 0px;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,0 +1,112 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(Image/moutain.jpg);
+}
+
+.title {
+  line-height: 0.5;
+  color: white;
+}
+
+.title h1 {
+  font-size: 40px;
+}
+
+.title p {
+  margin-bottom: 30px;
+}
+
+.box {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(44, 43, 43, 0.66);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 300px;
+  height: 40px;
+  padding: 0 30px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  color: white;
+  background: transparent;
+}
+
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  padding: 0 40px 0 20px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  color: rgb(255, 255, 255);
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08); /* Semi-transparent white */
+  backdrop-filter: blur(50px); /* Blurs the background behind the box */
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.show {
+  margin-top: -20px;
+  margin-left: 0px;
+  display: flex;
+  font-size: 12px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.signin button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.signin button:hover {
+  transform: scale(1.1);
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  margin: auto;
+}
+
+.img img {
+  width: 50px;
+  height: 50px;
+}
+
+.end {
+  color: white;
+}
+
+.end span {
+  color: rgb(251, 255, 5);
+}
