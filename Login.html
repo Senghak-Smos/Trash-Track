@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <div class="title">
+        <h1>Welcome</h1>
+        <p>Login your account</p>
+      </div>
+      <form action="">
+        <div class="input">
+          <div class="input-group">
+            <input type="text" placeholder="" required />
+            <label for=""
+              ><i
+                class="fa-solid fa-user"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+              Email</label
+            >
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="password"
+              placeholder=""
+              maxlength="8"
+              required
+            />
+            <label for=""
+              ><i
+                class="fa-solid fa-lock"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+              Password</label
+            >
+          </div>
+
+          <div class="show">
+            <input type="checkbox" id="showpassword" />
+            <p>Show password</p>
+          </div>
+          <div class="signin">
+            <button type="submit">Sign In</button>
+          </div>
+          <div class="img">
+            <img src="Image/google.png" alt="" />
+          </div>
+          <div class="end">
+            <p>Do you have account? <span>Register now!</span></p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const passinput = document.getElementById("password");
+      const showpass = document.getElementById("showpassword");
+
+      showpass.addEventListener("change", function () {
+        if (this.checked) {
+          passinput.type = "text";
+        } else {
+          passinput.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>
