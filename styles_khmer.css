@@ -569,3 +569,129 @@ footer p {
   justify-content: center;
   text-align: center;
 }
+
+.menu-toggle {
+  display: none;
+}
+
+/* ================================== responsive ================================== */
+@media (max-width: 768px) {
+  .nav-bar {
+    position: relative;
+    border-radius: 20px;
+    padding: 10px 15px;
+    width: 90%;
+  }
+
+  .logo1 {
+    margin-right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .nav-link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: #8e9eab;
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+    border-radius: 10px;
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-right: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-link.active {
+    display: flex;
+  }
+
+  .nav-link li {
+    margin: 12px 0;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hom {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .badge {
+    font-size: 35px;
+  }
+
+  .report {
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .tra {
+    margin-left: 0;
+  }
+
+  .p p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .ph img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .how-it-work {
+    padding: 40px 20px;
+  }
+
+  .how-it-work h1,
+  .catagories h2,
+  .everything-u-need h2,
+  .footer h2 {
+    font-size: 35px;
+  }
+
+  .sub-title,
+  .catagories p {
+    font-size: 16px;
+  }
+
+  .card-container,
+  .everything-u-need-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card,
+  .everything-u-need-card {
+    width: 85%;
+  }
+
+  footer {
+    padding: 40px 20px;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
