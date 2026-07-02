@@ -1,5 +1,5 @@
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -35,13 +35,13 @@ body {
   font-weight: bold;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  margin-right: 430px;
+  margin-right: 500px;
 }
 
 .nav-link {
   list-style: none;
   display: flex;
-  margin-right: 50px;
+  margin-right: 60px;
   font-family: "ADLaM Display", system-ui;
   position: relative;
 }
@@ -57,10 +57,12 @@ body {
 }
 
 .nav-link li {
-  margin-left: 40px;
+  margin-left: 30px;
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
 }
 
 .nav-link a {
+  font-family: "ADLaM Display", system-ui;
   position: relative;
   text-decoration: none;
   font-size: 22px;
@@ -70,6 +72,10 @@ body {
 
 .nav-link .lang-ch {
   margin-left: 5px;
+}
+
+.lang-ch select {
+  font-family: "ADLaM Display", system-ui;
 }
 
 .form-select {
@@ -82,6 +88,7 @@ body {
   font-family: "ADLaM Display", system-ui;
   font-size: 18px;
 }
+
 
 .nav-bar li.men:hover a {
   color: rgb(255, 15, 227);
@@ -97,6 +104,11 @@ body {
   color: rgb(130, 127, 127);
 }
 
+.menu-toggle{
+  display: none;
+}
+
+
 /* ========== title ============ */
 
 .first-title {
@@ -111,7 +123,7 @@ body {
 }
 
 .re h1 {
-  font-family: "ADLaM Display", system-ui;
+  font-family: "Noto Sans Khmer", sans-serif;
 }
 
 .port {
@@ -131,6 +143,7 @@ body {
 
 .re p {
   margin-bottom: 70px;
+  text-align: center;
 }
 
 .container-title {
@@ -166,6 +179,7 @@ body {
 }
 
 .back button {
+  font-family: "Koulen", "Noto Sans Khmer", sans-serif;
   width: 80px;
   height: 30px;
   background-color: #1fa2ff;

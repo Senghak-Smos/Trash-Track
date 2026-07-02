@@ -4,346 +4,234 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Waste</title>
-    <link rel="stylesheet" href="CSS/styles_khmer.css" />
-    <script src="JaVA_SCRIPT/Eng_kh.js" defer></script>
-
-    <!-- បន្ថែម Link Google Fonts នេះទៅក្នុង <head> -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+Khmer:wght@100..900&display=swap" rel="stylesheet"> -->
-
+    <script src="Eng_kh.js" defer></script>
+    <link rel="stylesheet" href="./CSS/styles_khmer.css" />
+    
+    <!-- Google Fonts: Koulen and Noto Sans Khmer -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+Khmer:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yrsa:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Archivo+Black&family=Audiowide&family=Lobster&family=Yrsa:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  </head>
   <body>
-    <div class="container">
-      <div class="nav-bar">
-        <div class="logo"><img src="Image/garbage-truck.png" alt="" /></div>
-        <div class="logo1">TrashTrack</div>
-  
+    <div class="container-main">
+      
+      <!-- Navigation Bar -->
+      <nav class="nav-bar">
+        <div class="nav-logo-zone">
+          <div class="logo"><img src="Image/garbage-truck.png" alt="Logo" /></div>
+          <div class="logo1">TrashTrack</div>
+        </div>
+
         <div class="menu-toggle" id="mobile-menu">
           <i class="fa-solid fa-bars"></i>
         </div>
 
-        <ul class="nav-link" id="nav-menu">
-          <li class="men"><a href="#home">ទំព័រដើម</a></li>
-          <li class="men"><a href="#home">អំពី</a></li>
-          <li class="men"><a href="#home">សេវ៉ាកម្ម</a></li>
-          <li class="men"><a href="#home">ទំនាក់ទំនង</a></li>
-          <li class="men"><a href="#home">ក្រុម</a></li>
-          <li class="lang-logo"><a href="" style="color: rgb(7, 7, 248);"><i class="bi bi-globe"></i></a></li>
+        <ul class="nav-link" id="nav-link">
+          <li class="men"><a href="#">ទំព័រដើម</a></li>
+          <li class="men"><a href="#">អំពី</a></li>
+          <li class="men"><a href="#">សេវ៉ាកម្ម</a></li>
+          <li class="men"><a href="#">ទំនាក់ទំនង</a></li>
+          <li class="men"><a href="#">ក្រុម</a></li>
+          <li class="lang-logo"><a href="#" style="color: rgb(7, 7, 248);"><i class="bi bi-globe"></i></a></li>
           <li class="lang-ch">
             <select class="form-select" id="lang-select">
-              <option value="index.html" selected>អង់គ្លេស</option>
+              <option value="index.html" selected>English</option>
               <option value="index_khmer.html">ខ្មែរ</option>
             </select>
           </li>
         </ul>
-      </div>
+      </nav>
 
-      <script>
-          document.addEventListener("DOMContentLoaded", function () {
-          const mobileMenu = document.getElementById("mobile-menu");
-          const navMenu = document.getElementById("nav-menu");
-          const menuIcon = mobileMenu.querySelector("i");
+      <!-- Js -->
+       <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-link');
 
-          mobileMenu.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
-
-            if (navMenu.classList.contains("active")) {
-              menuIcon.classList.remove("fa-bars");
-              menuIcon.classList.add("fa-xmark");
-            } else {
-              menuIcon.classList.remove("fa-xmark");
-              menuIcon.classList.add("fa-bars");
-            }
-          });
+        mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    
+        // ប្តូររូបរាង Icon ពីបន្ទាត់បី (bars) ទៅជាសញ្ញាខ្វែង (X) ពេលចុចបើក
+        const icon = mobileMenu.querySelector('i');
+        if (navList.classList.contains('active')) {
+          icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+          icon.classList.replace('fa-xmark', 'fa-bars');
+        }
         });
-      </script>
+       </script>
 
-
-      <div class="hom">
+      <!-- Hero Section -->
+      <header class="hom">
         <div class="hero">
-          <h2 class="badge">គំនិតផ្តួចផ្តើមទីក្រុងវៃឆ្លាត</h2>
-
-          <!--Main Title-->
+          <span class="badge">គំនិតផ្តួចផ្តើមទីក្រុងឆ្លាត</span>
           <div class="report">
-            <h3>រាយការបញ្ហាសំរាម</h3>
-            <h3 class="tra">ផ្លាស់ប្ដូរទីក្រុងរបស់អ្នក</h3>
+            <h3>រាយការណ៍អំពីបញ្ហាសំរាម</h3>
+            <h3 class="tra">កែប្រែនៅទីក្រុងរបស់អ្នក</h3>
           </div>
-
-          <!--Description-->
           <div class="p">
-            <p>
-              ផ្តល់អំណាចឲ្យប្រជាពលរដ្ឋរាយការណ៍បញ្ហាសំរាមភ្លាមៗ ដោយប្រើរូបថត និងទីតាំង
-            </p>
-            <p class="hel">
-              GPS ជួយបុគ្គលិកក្រុងដោះស្រាយបញ្ហាបានលឿនជាងមុន
-
-            </p>
+            <p>រាយការណ៍បញ្ហាសំរាមភ្លាមៗ ត្រឹមតែមួយប៉ព្រិចភ្នែកជាមួយរូបថត និងទីតាំងផ្ទាល់។ 
+              ជួយក្រុមការងារសាលាក្រុងឲ្យចុះដោះស្រាយបានកាន់តែលឿន</p>
           </div>
-
           <div class="buttons">
-            <a href="upload_image_khmer.html">
-              <button class="btn-getstart">ចាប់ផ្ដើមឥឡូវនេះ !</button>
-            </a>
+            <a href="./upload/upload_image_khmer.html" class="btn-getstart">ចាប់ផ្ដើមឥឡូវនេះ!</a>
           </div>
         </div>
         <div class="ph">
-          <img src="Image/Garbage Truck.jpg" alt="" />
+          <img src="Image/Garbage Truck.jpg" alt="Garbage Truck" />
         </div>
-      </div>
+      </header>
 
-      <div class="how-it-work">
-        <!--Title-->
-        <h1>វិធីសាស្រ្តដែលប្រព័ន្ធដំណើរការ</h1>
-
-        <!--Sub Title-->
-        <p class="sub-title">
-          ៤ ជំហានងាយៗ ដើម្បីធ្វើឲ្យសហគមន៍របស់អ្នកស្អាតជាងមុន
-        </p>
-
+      <!-- How it Works Section -->
+      <section class="how-it-work">
+        <h1>របៀបដែលដំណើរការ</h1>
+        <p class="sub-title">ជំហានងាយៗ ៤ យ៉ាង ដើម្បីធ្វើឲ្យសហគមន៍របស់អ្នកកាន់តែស្អាត</p>
         <div class="work">
-          <img src="/Image/Screenshot 2026-05-28 225859.png" alt="" />
+          <img src="Image/Screenshot 2026-05-28 225859.png" alt="Steps Overview" />
         </div>
-
-        <!-- Card Container-->
         <div class="card-container">
-          <!-- Card 1 -->
           <div class="card">
             <h2>ថតរូបភាព</h2>
-
-            <p>រាយការដោយការថតរូបភាពបញ្ហាសំរាមក្នុងតំបន់ដែលអ្នករស់នៅ។</p>
+            <p>ថតរូបបញ្ហាសំរាមនៅក្នុងតំបន់របស់អ្នក</p>
           </div>
-
-          <!-- Card 2 -->
           <div class="card">
             <h2>ចែករំលែកទីតាំង</h2>
-
-            <p>ទំលាក់ទីតាំងបញ្ហាសំរាមក្នុងតំបន់ដែលអ្នករស់នៅ។</p>
+            <p>បញ្ជាក់ទីតាំងដែលមានបញ្ហាសំរាមនៅក្នុងតំបន់របស់អ្នក</p>
           </div>
-
-          <!-- Card 3 -->
           <div class="card">
-            <h2>ពិពណ៍នាខ្លីៗ</h2>
-
-            <p>បន្ថែបការពិពណ៍នាខ្លីៗពីបញ្ហាសំរាមក្នុងតំបន់អ្នក។</p>
+            <h2>ពិពណ៌នាអំពីតំបន់នោះ</h2>
+            <p>បន្ថែមការពិពណ៌នាខ្លីៗអំពីបញ្ហា</p>
           </div>
-
-          <!-- Card 4 -->
           <div class="card">
-            <h2>តាមដានស្ថានភាព & ដោះស្រាយបញ្ហា</h2>
-
-            <p>តាមដានស្ថានភាពការរាយការណ៍របស់អ្នកនិងដោះស្រាយបញ្ហាដែលកើតមាននោះ។</p>
+            <h2>តាមដាន និងដោះស្រាយ</h2>
+            <p>តាមដានស្ថានភាពរបាយការណ៍របស់អ្នក មុនពេលចាត់ការ</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="catagories">
-        <h2>ប្រភេទនៃសំរាម</h2>
-
-        <p>រាយការណ៍បញ្ហាគ្រប់ប្រភេទក្នុងតំបន់របស់អ្នកតាមប្រព័ន្ធរបស់យើង។</p>
+      <!-- Categories Section -->
+      <section class="catagories">
+        <h2>ប្រភេទសំរាម</h2>
+        <p>រាយការណ៍រាល់បញ្ហាសំរាមគ្រប់ប្រភេទនៅក្នុងតំបន់របស់អ្នកជាមួយ TrashTrack.</p>
         <div class="slider">
           <div class="slide-track">
-            <!-- set 1 -->
-            <div class="categories-types"><p>សំរាមគ្មានសំដាប់ធ្នាប់</p></div>
-            <div class="categories-types"><p>សំរាមមានសារធាតុគ្រោះថ្នាក់</p></div>
-            <div class="categories-types"><p>សំរាមសរីរាង្គ</p></div>
-            <div class="categories-types"><p>សំរាមផ្លាស្ទិក</p></div>
-            <div class="categories-types"><p>សំរាមដែលធំៗ</p></div>
-            <div class="categories-types"><p>ធុងសំរាមពេញហា</p></div>
-
-            <!-- set 2 -->
-            <div class="categories-types"><p>សំរាមគ្មានសំដាប់ធ្នាប់</p></div>
-            <div class="categories-types"><p>សំរាមមានសារធាតុគ្រោះថ្នាក់</p></div>
-            <div class="categories-types"><p>សំរាមសរីរាង្គ</p></div>
-            <div class="categories-types"><p>សំរាមផ្លាស្ទិក</p></div>
-            <div class="categories-types"><p>សំរាមដែលធំៗ</p></div>
-            <div class="categories-types"><p>ធុងសំរាមពេញហា</p></div>
-            <!-- set ៣ -->
-            <div class="categories-types"><p>សំរាមគ្មានសំដាប់ធ្នាប់</p></div>
-            <div class="categories-types"><p>សំរាមមានសារធាតុគ្រោះថ្នាក់</p></div>
-            <div class="categories-types"><p>សំរាមសរីរាង្គ</p></div>
-            <div class="categories-types"><p>សំរាមផ្លាស្ទិក</p></div>
-            <div class="categories-types"><p>សំរាមដែលធំៗ</p></div>
-            <div class="categories-types"><p>ធុងសំរាមពេញហា</p></div>
-            <!-- set ៤ -->
-            <div class="categories-types"><p>សំរាមគ្មានសំដាប់ធ្នាប់</p></div>
-            <div class="categories-types"><p>សំរាមមានសារធាតុគ្រោះថ្នាក់</p></div>
-            <div class="categories-types"><p>សំរាមសរីរាង្គ</p></div>
-            <div class="categories-types"><p>សំរាមផ្លាស្ទិក</p></div>
-            <div class="categories-types"><p>សំរាមដែលធំៗ</p></div>
-            <div class="categories-types"><p>ធុងសំរាមពេញហា</p></div>
+            <div class="categories-types">សំរាមគ្មានសណ្ដាប់ធ្នាប់</div>
+            <div class="categories-types">សំរាមគ្រោះថ្នាក់</div>
+            <div class="categories-types">សំរាមសើមឫសំរាមសេរីរាង្គ</div>
+            <div class="categories-types">សំរាមផ្លាស្ទិក</div>
+            <div class="categories-types">សំរាមដែលមានទំហំធំ</div>
+            <div class="categories-types">សំរាមពេញធុង</div>
+            
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="everything-u-need">
-        <h2 class="title">ប្រព័ន្ធពេញលេញ</h2>
-
-        <p class="sub-title">
-            ប្រព័ន្ធពេញលេញសម្រាប់ប្រជាពលរដ្ឋ និងការិយាល័យ ក្រុង        
-        </p>
-
+      <!-- Everything You Need Section -->
+      <section class="everything-u-need">
+        <h2 class="title">អ្វីៗគ្រប់យ៉ាងដែលអ្នកត្រូវការ</h2>
+        <p class="sub-title">ប្រព័ន្ធពេញលេញមួយសម្រាប់ប្រជាពលរដ្ឋ និងមន្ត្រីសាលាក្រុង។</p>
+        
         <div class="everything-u-need-container">
           <div class="everything-u-need-card">
-            <h3>ភស្ដុតាងរូបភាព</h3>
-
-            <p>អាប់ឡូដរូបថតបញ្ហាសំរាមអោយច្បាស់លាស់។</p>
+            <h3>ភស្តុតាងរូបថត</h3>
+            <p>បង្ហោះរូបថតដើម្បីបញ្ជាក់ពីបញ្ហាសំរាមឲ្យបានច្បាស់លាស់។</p>
           </div>
-
           <div class="everything-u-need-card">
-            <h3>GPS & ទីតាំង</h3>
-
-            <p>បញ្ចូលទីតាំងនៃបញ្ហាសំរាមក្នុងតំបន់របស់អ្នក។</p>
+            <h3>ទីតាំង GPS</h3>
+            <p>បញ្ជាក់ទីតាំងដែលមានបញ្ហាសំរាមនៅក្នុងតំបន់របស់អ្នក។</p>
           </div>
-
           <div class="everything-u-need-card">
             <h3>តាមដានស្ថានភាព</h3>
-
-            <p>ទទួលបានស្ថានភាពពេលវេលាពិតនៃការរាយការណ៍របស់អ្នក។</p>
+            <p>ទទួលបានព័ត៌មានស្ថានភាពបច្ចុប្បន្ននៃរបាយការណ៍របស់អ្នកភ្លាមៗ។</p>
           </div>
-        </div>
-
-        <div class="everything-u-need-container">
           <div class="everything-u-need-card">
             <h3>ការជូនដំណឹង</h3>
-
-            <p>ទទួលបានការជូនដំណឹងនៅពេលស្ថានភាពរបាយការណ៍របស់អ្នកមានការផ្លាស់ប្តូរ។</p>
+            <p>ទទួលសារដំណឹងភ្លាមៗ នៅពេលស្ថានភាពរបាយការណ៍របស់អ្នកមានការប្រែប្រួល។</p>
           </div>
-
           <div class="everything-u-need-card">
-            <h3>ការគ្រប់គ្រង</h3>
-
-            <p>ឧបករណ៍គ្រប់គ្រងមានប្រសិទ្ធភាពសម្រាប់បុគ្គលិក ដើម្បីធ្វើសកម្មភាពបានលឿន។</p>
+            <h3>ផ្ទាំងគ្រប់គ្រងសាលាក្រុង</h3>
+            <p>ឧបករណ៍គ្រប់គ្រងប្រកបដោយប្រសិទ្ធភាព សម្រាប់មន្ត្រីក្រុងចុះចាត់ការបានរហ័ស។</p>
           </div>
-
           <div class="everything-u-need-card">
-            <h3>ទីក្រុងស្អាត</h3>
-
-            <p>ចូលរួមបង្កើតបរិស្ថានស្អាត និងមានសុខភាពល្អ។</p>
+            <h3>ទីក្រុងកាន់តែស្អាត</h3>
+            <p>ចូលរួមចំណែកដើម្បីបង្កើតបរិស្ថានស្អាត និងមានសុខភាពល្អជាងមុន។</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!--Footer-->
-
-      <div class="footer">
-        <h2>តើអ្នកត្រៀមខ្លួនរួចរាល់ហើយនៅ?</h2>
-
-        <p>
-          ចូលរួមជាមួយប្រជាពលរដ្ឋរាប់ពាន់នាក់ ដើម្បីរក្សាទីក្រុងស្អាត។
-        </p>
-
+      <!-- Footer CTA Section -->
+      <section class="footer-cta">
+        <h2>តើអ្នកត្រៀមខ្លួនហើយឫនៅ?</h2>
+        <p>ចូលរួមរាយការណ៍ទាំងអស់គ្នាដើម្បីបរិស្ថានស្អាតនិងមានអនាម័យ</p>
         <div class="buttons">
-          <button class="btn-getstart">ចាប់ផ្ដើមរាយការណ៍ឥឡូវនេះ!</button>
+          <button class="btn-getstart">ចាប់ផ្ដើមឥឡូវនេះ!</button>
         </div>
-      </div>
+      </section>
 
+      <!-- Main Footer -->
       <footer>
-
-        <div class="container">
+        <div class="footer-grid">
           <div class="about">
             <h2>អំពីយើង</h2>
-            
-            <p>
-            ប្រព័ន្ធនេះបង្កើតឡើងសម្រាប់តាមដានពីការចោលចោលសំរាមគ្មាសណ្ដាប់ធ្នាប់ 
-            ដោយប្រើប្រាស់ការស្វែងរកទីតាំងពីប្រជាពលរដ្ឋ <br>ដែលបានរាយការណ៍។ វាជួយកែ
-            លម្អការកែច្នៃឡើងវិញកាត់ <br>បន្ថយការបំពុល និងគាំទ្រការគ្រប់គ្រងសំរាមឲ្យកាន់តែមាន <br>ប្រសិទ្ធភាព 
-            ដើម្បីសហគមន៍ស្អាត និងមាននិរន្តរភាព។
-            </p>
-            
-          <div class="icon">
-            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            
-            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <p>Trash Track គឺជាប្រព័ន្ធមួយដែលតាមដានកាកសំណល់ចាប់ពីពេលបោះចោល
+               រហូតដល់គោលដៅចុងក្រោយ ដោយប្រើប្រាស់ប្រព័ន្ធ GPS 
+                វាជួយជម្រុញការកែច្នៃឡើងវិញ កាត់បន្ថយការបំពុល និងគាំទ្រដល់ការគ្រប់គ្រងកាកសំណល់ឱ្យកាន់តែប្រសើរឡើង។</p>
+            <ul class="icon">
+              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="about quick">
+            <h2>តំណរហ័ស</h2>
+            <ul>
+              <li><a href="">អំពី</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">គោលការណ៍ឯកជនភាព</a></li>
+              <li><a href="">ជំនួយ</a></li>
+              <li><a href="">លក្ខខណ្ឌនៃការប្រើប្រាស់</a></li>
+            </ul>
+          </div>
+          <div class="about quick">
+            <h2>សេវ៉ាកម្ម</h2>
+            <ul>
+              <li><a href="">ថតរូបភាព</a></li>
+              <li><a href="">ចែករំលែកទីតាំង</a></li>
+              <li><a href="">ពិពណ៌នាអំពីតំបន់នោះ</a></li>
+              <li><a href="">តាមដាន​ និងដោះស្រាយ</a></li>
+            </ul>
+          </div>
+          <div class="about">
+            <h2>ទំនាក់ទំនងយើង</h2>
+            <ul class="info">
+              <li>
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <span>RUPP Phnom Penh, Cambodia</span>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-phone"></i></span>
+                <p class="phon">(+855) 015-475-879<br>(+855) 071-712-6290</p>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <p class="phon"><a href="mailto:TrashTrack@gmail.com">TrashTrack@gmail.com</a></p>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="about quick">
-          <h2>តំណរលីងរហ័ស</h2>
-          
-            <li><a href="">ទំព័រដើម</a></li>
-            <li><a href="">អំពីយើង</a></li>
-            <li><a href="">សេវ៉ាកម្ម</a></li>
-            <li><a href="">ទំនាក់ទំនង</a></li>
-            <li><a href="">ក្រុម</a></li>
-          
-        </div>
-        <div class="about quick">
-          <h2>សេវ៉ាកម្ម</h2>
-          
-            <li><a href="">ថតរូបភាព</a></li>
-            <li><a href="">ចែករំលែកទីតាំង</a></li>
-            <li><a href="">ពិពណ៍នាខ្លីៗ</a></li>
-            <li><a href="">តាមដានស្ថានភាព & ដោះស្រាយបញ្ហា</a></li>
-          
-        </div>
-        <div class="about">
-          <h2>Contact Us</h2>
-          <div class="info">
-            <li>
-              <span><i class="fa-solid fa-location-dot"></i></span>
-              <span>RUPP 
-                Phnom Penh , Cambodia</span>
-              </li>
-              
-              <li>
-                <span> <i class="fa-solid fa-phone"></i> </span>
-                <p  class="phon">
-                  (+885) - 015-475-879<br>
-                  (+855) - 0717-126-290<br>
-                  (+855) - 077-750-911<br>
-                  (+855) - xxx-xxx-xxx<br>
-                  (+855) - xxx-xxx-xxx
-                </p>
-                </li>
-                <li>
-                  <span><i class="fa-solid fa-envelope"></i></span>
-                  <p  class="phon"><a href="">TrashTrack@gmail.com</a></p>
-             
-                  </li>
-                </div>
-                
-              </div>
-            </div>
-          </ul>
-        </footer>
-        <div class="copyright">
-          <p>@ 2026 TrashTrack . All rights reserved.</p>
-        </div>
+      </footer>
+      
+      <div class="copyright">
+        <p>&copy; 2026 TrashTrack. All rights reserved.</p>
+      </div>
+    </div>
   </body>
-  </html>
+</html>
