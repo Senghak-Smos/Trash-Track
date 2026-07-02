@@ -1,6 +1,3 @@
-/* =========================
-   General Reset & Base Styles
-========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,9 +20,6 @@ ul {
   overflow-x: hidden;
 }
 
-/* =========================
-   Navigation Bar (លុប margin-right ចេញដើម្បីកុំឱ្យធ្លាយ)
-========================= */
 .nav-bar {
   position: sticky;
   top: 0;
@@ -91,9 +85,6 @@ ul {
   cursor: pointer;
 }
 
-/* =========================
-   Hero Section (ប្រើ Flex-wrap ដើម្បីឱ្យធ្លាក់ចុះពេលអេក្រង់តូច)
-========================= */
 .hom {
   display: flex;
   flex-wrap: wrap;
@@ -170,9 +161,6 @@ ul {
   transform: translateY(-5px);
 }
 
-/* =========================
-   How It Works Section
-========================= */
 .how-it-work {
   background-color: rgb(255, 255, 255);
   padding: 60px 5%;
@@ -232,9 +220,6 @@ ul {
   line-height: 1.5;
 }
 
-/* =========================
-   Categories Slider Section
-========================= */
 .catagories {
   background-color: white;
   padding: 40px 0;
@@ -284,9 +269,6 @@ ul {
   }
 }
 
-/* =========================
-   Everything You Need Section (ប្រើ Grid ជំនួស 33.3% ដើម្បីធ្វើ Responsive ស្វ័យប្រវត្តិ)
-========================= */
 .everything-u-need {
   background-color: white;
   padding: 60px 5%;
@@ -334,9 +316,6 @@ ul {
   line-height: 1.5;
 }
 
-/* =========================
-   Footer CTA Section
-========================= */
 .footer-cta {
   padding: 60px 5%;
   text-align: center;
@@ -355,9 +334,6 @@ ul {
   margin-bottom: 30px;
 }
 
-/* =========================
-   Main Footer & Copyright
-========================= */
 footer {
   background-color: #2b2b2b;
   padding: 40px 5%;
@@ -369,7 +345,7 @@ footer {
   grid-template-columns: repeat(
     auto-fit,
     minmax(220px, 1fr)
-  ); /* Responsive ជួរ Footer */
+  ); 
   gap: 40px;
 }
 
@@ -471,12 +447,12 @@ footer {
 }
 
 /* =========================
-   Responsive Breakpoints (សំខាន់បំផុតសម្រាប់ទូរស័ព្ទដៃ)
+   Responsive 
 ========================= */
 @media (max-width: 768px) {
   /* ប្តូរ Navbar ឱ្យទៅជាជួរឈរនៅលើ Mobile */
   .nav-bar {
-    flex-direction: row; /* ប្តូរមកជាជួរដេកវិញ ដើម្បីឱ្យ Logo និង Hamburger នៅសងខាងគ្នា */
+    flex-direction: row; 
     justify-content: space-between;
     position: relative;
     border-radius: 25px;
@@ -484,14 +460,14 @@ footer {
   }
 
   .menu-toggle {
-    display: block; /* បង្ហាញប៊ូតុង Hamburger នៅលើ Mobile */
+    display: block; 
   }
 
   .nav-link {
-    display: none; /* លាក់ Menu ធម្មតាសិន */
+    display: none; 
     flex-direction: column;
     position: absolute;
-    top: 100%; /* ឱ្យធ្លាក់ចុះមកក្រោម Navbar */
+    top: 100%; 
     right: 0;
     width: 150px;
     background: linear-gradient(to bottom, #12d8fa, #a6ffcb);
@@ -506,7 +482,6 @@ footer {
     display: flex;
   }
 
-  /* ប្តូរ Hero Section ឱ្យរូបភាពនៅខាងលើ អក្សរនៅខាងក្រោម */
   .hom {
     flex-direction: column-reverse;
     text-align: center;
@@ -539,7 +514,7 @@ footer {
     grid-template-columns: repeat(1,1fr);
   }
 
-  /* រៀបចំ Footer ឱ្យចំកណ្តាលនៅលើទូរស័ព្ទ */
+  
   .about {
     text-align: center;
   }
